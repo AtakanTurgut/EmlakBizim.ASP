@@ -2,19 +2,19 @@
 
 ## EmlakBizim Api Addresses
 
-If we want to start the project with Microsoft Visual Studio, we start the project by right-clicking on the "\Views\Home\Index.cshtml" file while the project is open and selecting "View in Browser ([Selected Browser](https://www.google.com.tr/))".
+If we want to start the project with [Microsoft Visual Studio](https://visualstudio.microsoft.com/), we start the project by right-clicking on the "[\Views\Home\Index.cshtml](https://github.com/AtakanTurgut/emlakbizim/blob/master/emlakBizim/Views/Home/Index.cshtml)" file while the project is open and selecting "View in Browser ([Selected Browser](https://www.google.com.tr/))".
 
-If we want, we can also use "\Index.cshtml" of other "\Views" files to see how other pages look.
+If we want, we can also use "\Index.cshtml" of other "[\Views](https://github.com/AtakanTurgut/emlakbizim/tree/master/emlakBizim/Views)" files to see how other pages look.
 
-However, it's best to start the project with "\Views\Home\Index.cshtml" to run it properly.
+However, it's best to start the project with "[\Views\Home\Index.cshtml](https://github.com/AtakanTurgut/emlakbizim/blob/master/emlakBizim/Views/Home/Index.cshtml)" to run it properly.
 
 The application also has an admin panel. Admin can perform operations such as adding, deleting, updating, seeing all places.
 
-The project runs on "localhost:?/".
+The project runs on "[localhost:?/](https://localhost:44330/)".
 
 - Some packages can be installed from the "[NuGet Gallery](https://www.nuget.org/packages/Microsoft.AspNet.Identity.Core)" with the help of the "Tools > NuGet Package Manager > Package Manager Console".
 ----
-## EmlakBizim Project Images.
+## EmlakBizim Project [Images](https://github.com/AtakanTurgut/emlakbizim/tree/master/pictures).
 
 ### 1. Home Page:  https://localhost:44330/Home/Index
 ![](/pictures/HomePage1.PNG)

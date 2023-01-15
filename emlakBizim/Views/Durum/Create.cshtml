@@ -1,0 +1,105 @@
+﻿@model emlakBizim.Models.Durum
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <br />
+            <!--Filtreleme Kısmı-->
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">En Az</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="En Az (Fiyat)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">En Çok</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="En Çok (Fiyat)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Şehir</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Şehir">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Semt</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Sempt">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Mahalle</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Mahalle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Durum</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Durum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Tip</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Tip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label"></label>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-filter"></i> FİLTRELE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--İlan listesi-->
+        <div class="col-md-9">
+            <div class="thumbnail" style="width:845px;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Admin/Index">Admin Sayfası</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Durum Ekle</li>
+                    </ol>
+                </nav>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.durumAd, "Durum Adı", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.durumAd, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.durumAd, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Ekle" class="btn btn-primary" />
+                                @Html.ActionLink("Durum Listesi", "Index", null, new
+                            {
+                                @class = "btn btn-warning"
+                            })
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

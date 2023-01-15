@@ -1,0 +1,34 @@
+﻿@model emlakBizim.Models.Semt
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Semt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sehir.sehirAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sehir.sehirAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.semtAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.semtAd)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.semtId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

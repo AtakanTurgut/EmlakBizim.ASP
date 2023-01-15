@@ -1,0 +1,86 @@
+﻿@model IEnumerable<emlakBizim.Models.Ilan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        @Html.Action("PartialFilter", "Home")
+
+        <!--İlan listesi-->
+        <div class="col-md-9">
+            <div class="thumbnail" style="width:845px;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Home/Index">Anasayfa</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">İlan Listesi</li>
+                    </ol>
+                </nav>
+
+                <!--<a class="btn btn-primary btn-block" href="a@Url.Action("Create")">İlan Ekle</a>-->
+                <br />
+
+                <table class="table">
+                    <tr>
+                        <th>
+                            Mahalle
+                        </th>
+                        <th>
+                            Tip
+                        </th>
+
+                        <th>
+                            Adres
+                        </th>
+
+                        <th>
+                            Şehir
+                        </th>
+                        <th>
+                            Semt
+                        </th>
+                        <th>
+                            Durum
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.mahalleAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tip.tipAd)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.adres)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.Semt.Sehir.sehirAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.Semt.semtAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tip.Durum.durumAd)
+                            </td>
+                            <td>
+                                <a class="btn btn-success" href="@Url.Action("Images", new { id = item.ilanId })"><i class="fa fa-camera"></i> Resim Ekle</a>
+                                <a class="btn btn-primary" href="@Url.Action("Edit", new { id = item.ilanId })"><i class="fa fa-edit"></i> Düzenle</a>
+                                <a class="btn btn-danger" href="@Url.Action("Delete", new { id = item.ilanId })"><i class="fa fa-trash"></i> Sil</a>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>

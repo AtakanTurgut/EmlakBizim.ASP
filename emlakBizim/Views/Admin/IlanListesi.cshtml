@@ -1,0 +1,148 @@
+﻿@model IEnumerable<emlakBizim.Models.Ilan>
+@{
+    ViewBag.Title = "IlanListesi";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <br />
+            <!--Filtreleme Kısmı-->
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">En Az</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="En Az (Fiyat)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">En Çok</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="En Çok (Fiyat)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Şehir</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Şehir">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Semt</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Sempt">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Mahalle</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Mahalle">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Durum</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Durum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">Tip</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Tip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label"></label>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-filter"></i> FİLTRELE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--İlan listesi-->
+        <div class="col-md-9">
+            <div class="thumbnail" style="width:845px;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Admin/Index">Admin Sayfasi</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">İlan Listesi</li>
+                    </ol>
+                </nav>
+
+                <!--<a class="btn btn-primary btn-block" href="a@Url.Action("Create")">İlan Ekle</a>-->
+                <br />
+
+                <table class="table">
+                    <tr>
+                        <th>
+                            Kullanıcı Adı
+                        </th>
+
+                        <th>
+                            Mahalle
+                        </th>
+                        <th>
+                            Tip
+                        </th>
+
+                        <th>
+                            Adres
+                        </th>
+
+                        <th>
+                            Şehir
+                        </th>
+                        <th>
+                            Semt
+                        </th>
+                        <th>
+                            Durum
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary">@item.userName</button>
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.mahalleAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tip.tipAd)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.adres)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.Semt.Sehir.sehirAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.Semt.semtAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tip.Durum.durumAd)
+                            </td>
+                            <td>
+                                <!--
+                                <a class="btn btn-success" href="a@Url.Action("Images", new { id = item.ilanId })"><i class="fa fa-camera"></i> Resim Ekle</a>
+                                <a class="btn btn-primary" href="a@Url.Action("Edit", new { id = item.ilanId })"><i class="fa fa-edit"></i> Düzenle</a>
+                                -->
+                                <a class="btn btn-danger" href="@Url.Action("Delete", new { id = item.ilanId })"><i class="fa fa-trash"></i> Sil</a>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>

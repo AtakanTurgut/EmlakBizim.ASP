@@ -1,0 +1,72 @@
+﻿@model emlakBizim.Models.Ilan
+@{
+    ViewBag.Title = "Detay";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <!--Slider-->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    @{ int i = 0; }
+                    @foreach (var imgs in ViewBag.imgs)
+                    {
+                                i++;
+                                var active = i == 1 ? "active" : "";
+                        <div class="item @active">
+                            <img src="/Content/images/@imgs.resimAd" alt="house" style="width:1150px; height:550px">
+                        </div>
+                    }
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr><th colspan="2">İlan Özellikleri</th></tr>
+                    <tr><td><strong>Açıklama</strong></td><td>@Model.acıklama</td></tr>
+                    <tr><td><strong>Fiyat</strong></td><td>@Model.fiyat</td></tr>
+                    <tr><td><strong>Durum</strong></td><td>@Model.Tip.Durum.durumAd</td></tr>
+                    <tr><td><strong>Tip</strong></td><td>@Model.Tip.tipAd</td></tr>
+                    <tr><td><strong>Alan m<sup>2</sup></strong></td><td>@Model.alan m<sup>2</sup></td></tr>
+                    <tr><td><strong>Oda Sayısı</strong></td><td>@Model.odaSayisi</td></tr>
+                    <tr><td><strong>Banyo Sayısı</strong></td><td>@Model.banyoSayisi</td></tr>
+                    <tr><td><strong>Kat</strong></td><td>@Model.kat</td></tr>
+                    <tr><td><strong>Adres</strong></td><td>@Model.adres</td></tr>
+                    <tr><td><strong>Mahalle</strong></td><td>@Model.Mahalle.mahalleAd</td></tr>
+                    <tr><td><strong>Semt</strong></td><td>@Model.Mahalle.Semt.semtAd</td></tr>
+                    <tr><td><strong>şehir</strong></td><td>@Model.Mahalle.Semt.Sehir.sehirAd</td></tr>
+                    <tr><td><strong>Kredi</strong></td><td>
+                        @if (Model.kredi == true)
+                        {
+                            <label class="label label-success">EVET</label>
+                        } else
+                        {
+                            <label class="label label-danger">HAYIR</label>
+                        }
+                        </td></tr>
+                    <tr><td><strong>Telefon</strong></td><td><button class="btn btn-success btn-block">
+                        <i class="fa fa-phone" aria-hidden="true"></i> @Model.telefon</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+

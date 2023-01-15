@@ -1,0 +1,46 @@
+﻿@model IEnumerable<emlakBizim.Models.Ilan>
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="container">
+
+    <div class="row">
+        @Html.Action("PartialFilter", "Home")
+
+        <!--İlan listesi-->
+        <br />
+        @foreach (var item in Model)
+        {
+            var c = 1;
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    @foreach (var img in ViewBag.imgs)
+                    {
+                        if (img.ilanId == item.ilanId)
+                        {
+                            if (c == 1)
+                            {
+                                <a href="/Home/Detay/@item.ilanId">
+                                    <img src="/Content/images/@img.resimAd"
+                                         style="height:300px;" alt="imgName">
+                                </a>
+                                c++;
+                            }
+                        }
+                    }
+                    <div class="caption">
+                        <p><strong>@item.Tip.Durum.durumAd </strong> (@item.Tip.tipAd)</p>
+                        <p>@item.Mahalle.Semt.Sehir.sehirAd - @item.Mahalle.Semt.semtAd</p>
+                        <p>
+                            <button class="btn" style="background-color:#ff0000; color:snow"> @item.fiyat ₺</button>
+                            <button class="btn btn-primary"> @item.alan m<sup>2</sup></button>
+                            <button class="btn btn-success pull-right"><i class="fa fa-bed" aria-hidden="true"></i>  @item.odaSayisi</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

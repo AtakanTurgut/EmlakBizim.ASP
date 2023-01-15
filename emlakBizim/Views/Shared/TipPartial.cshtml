@@ -1,0 +1,10 @@
+﻿
+<option value="">Tip Seç</option>
+
+@if (ViewBag.tipListesi != null)
+{
+    foreach (var item in ViewBag.tipListesi)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+}

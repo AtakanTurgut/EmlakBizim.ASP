@@ -1,0 +1,24 @@
+﻿@model IEnumerable<emlakBizim.Models.Ilan>
+@{ int i = 0; }
+@foreach (var item in Model)
+{
+            i++;
+            var c = 1;
+
+            var active = i == 1 ? "active" : "";
+    <div class="item @active">
+        @foreach (var img in ViewBag.imgs)
+        {
+            if (img.ilanId == item.ilanId)
+            {
+                if (@c == 1)
+                {
+                    <a href="/Home/Detay/@item.ilanId">
+                        <img src="/Content/images/@img.resimAd" alt="imgName" style="width:1150px; height:450px">
+                    </a>
+                    c++;
+                }
+            }
+        }
+    </div>
+}

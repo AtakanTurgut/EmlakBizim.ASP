@@ -1,0 +1,150 @@
+﻿@model emlakBizim.Models.Ilan
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+    <h3>Bu ilanı silmek istediğinizden emin misiniz?</h3>
+    <div>
+        <h4>Ilan</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Mahalle
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.mahalleId)
+            </dd>
+
+            <dt>
+                Tip
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.tipId)
+            </dd>
+
+            <dt>
+                Açıklama
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.acıklama)
+            </dd>
+
+            <dt>
+                Fiyat
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fiyat)
+            </dd>
+
+            <dt>
+                Oda Sayısı
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.odaSayisi)
+            </dd>
+
+            <dt>
+                Banyo Sayısı
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.banyoSayisi)
+            </dd>
+
+            <dt>
+                Kredi
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.kredi)
+            </dd>
+
+            <dt>
+                Alan
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.alan)
+            </dd>
+
+            <dt>
+                Kat
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.kat)
+            </dd>
+
+            <dt>
+                Telefon
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.telefon)
+            </dd>
+
+            <dt>
+                Adres
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.adres)
+            </dd>
+
+            <dt>
+                Kullanıcı Adı
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.userName)
+            </dd>
+
+            <dt>
+                Şehir
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.sehirId)
+            </dd>
+
+            <dt>
+                Semt
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.semtId)
+            </dd>
+
+            <dt>
+                Durum
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.durumId)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-danger" /> |
+                @Html.ActionLink("İlan Listesi", "Index", null, new
+        {
+            @class = "btn btn-warning"
+        })
+            </div>
+        }
+    </div>
+
+</div>
+

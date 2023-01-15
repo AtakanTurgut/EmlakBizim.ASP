@@ -1,0 +1,10 @@
+﻿
+<option value="">Mahalle Seç</option>
+
+@if (ViewBag.mahalleListesi != null)
+{
+    foreach (var item in ViewBag.mahalleListesi)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+}

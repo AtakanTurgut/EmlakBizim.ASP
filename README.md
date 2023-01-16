@@ -9,6 +9,9 @@ If we want, we can also use "\Index.cshtml" of other "[\Views](https://github.co
 However, it's best to start the project with "[\Views\Home\Index.cshtml](https://github.com/AtakanTurgut/emlakbizim/blob/master/emlakBizim/Views/Home/Index.cshtml)" to run it properly.
 
 The application also has an admin panel. Admin can perform operations such as adding, deleting, updating, seeing all places.
+For the admin page:
+                User Name: atakanturgut
+                Password : 123456
 
 The project runs on "[localhost:?/](https://localhost:44330/)".
 

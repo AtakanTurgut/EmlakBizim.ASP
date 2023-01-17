@@ -10,9 +10,9 @@ However, it's best to start the project with "[\Views\Home\Index.cshtml](https:/
 
 The application also has an admin panel. Admin can perform operations such as adding, deleting, updating, seeing all places.
 
-Use this username and password for the admin page.
+Use this user name and password for the admin page.
 
-                User Name: atakanturgut
+                UserName : atakanturgut
                 Password : 123456
 
 The project runs on "[localhost:?/](https://localhost:44330/)".

@@ -9,11 +9,35 @@ If we want, we can also use "\Index.cshtml" of other "[\Views](https://github.co
 However, it's best to start the project with "[\Views\Home\Index.cshtml](https://github.com/AtakanTurgut/emlakbizim/blob/master/emlakBizim/Views/Home/Index.cshtml)" to run it properly.
 
 The application also has an admin panel. Admin can perform operations such as adding, deleting, updating, seeing all places.
-For the admin page:
+
+Use this username and password for the admin page.
+
                 User Name: atakanturgut
                 Password : 123456
 
 The project runs on "[localhost:?/](https://localhost:44330/)".
+
+## Used Packages.
+- [EntityFramework 6.4.4](https://www.nuget.org/packages/EntityFramework/)
+```
+    PM>  NuGet\Install-Package EntityFramework -Version 6.4.4
+```
+- [Microsoft.AspNet.Identity.Core 2.2.3](https://www.nuget.org/packages/Microsoft.AspNet.Identity.Core)
+```
+    PM>  NuGet\Install-Package Microsoft.AspNet.Identity.Core -Version 2.2.3
+```
+- [Microsoft.AspNet.Identity.Owin 2.2.3](https://www.nuget.org/packages/Microsoft.AspNet.Identity.Owin/)
+```
+    PM>  NuGet\Install-Package Microsoft.AspNet.Identity.Owin -Version 2.2.3
+```
+- [Microsoft.AspNet.Identity.EntityFramework 2.2.3](https://www.nuget.org/packages/Microsoft.AspNet.Identity.EntityFramework/)
+```
+    PM>  NuGet\Install-Package Microsoft.AspNet.Identity.EntityFramework -Version 2.2.3
+```
+- [Microsoft.Owin.Host.SystemWeb 4.2.2](https://www.nuget.org/packages/Microsoft.Owin.Host.SystemWeb)
+```
+    PM>  NuGet\Install-Package Microsoft.Owin.Host.SystemWeb -Version 4.2.2
+```
 
 - Some packages can be installed from the "[NuGet Gallery](https://www.nuget.org/packages/Microsoft.AspNet.Identity.Core)" with the help of the "Tools > NuGet Package Manager > Package Manager Console".
 ----

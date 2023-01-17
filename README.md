@@ -1,4 +1,4 @@
-# Real estate website application (EmlakBizim) with ASP.NET MVC5.
+# Real estate website application (EmlakBizim) with ASP.NET MVC5
 
 ## EmlakBizim Api Addresses
 
@@ -17,7 +17,7 @@ Use this user name and password for the admin page.
 
 The project runs on "[localhost:?/](https://localhost:44330/)".
 
-## Used Packages.
+## Used Packages
 
 - Some packages can be installed from the "[NuGet Gallery](https://www.nuget.org/packages/Microsoft.AspNet.Identity.Core)" with the help of the "Tools > NuGet Package Manager > Package Manager Console".
 
@@ -43,7 +43,7 @@ The project runs on "[localhost:?/](https://localhost:44330/)".
 ```
 
 ----
-## EmlakBizim Project [Images](https://github.com/AtakanTurgut/emlakbizim/tree/master/pictures).
+## EmlakBizim Project [Images](https://github.com/AtakanTurgut/emlakbizim/tree/master/pictures)
 
 ### 1. Home Page:  https://localhost:44330/Home/Index
 ![](/pictures/HomePage1.PNG)

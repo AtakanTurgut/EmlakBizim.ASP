@@ -18,6 +18,9 @@ Use this username and password for the admin page.
 The project runs on "[localhost:?/](https://localhost:44330/)".
 
 ## Used Packages.
+
+- Some packages can be installed from the "[NuGet Gallery](https://www.nuget.org/packages/Microsoft.AspNet.Identity.Core)" with the help of the "Tools > NuGet Package Manager > Package Manager Console".
+
 - [EntityFramework 6.4.4](https://www.nuget.org/packages/EntityFramework/)
 ```
     PM>  NuGet\Install-Package EntityFramework -Version 6.4.4
@@ -39,7 +42,6 @@ The project runs on "[localhost:?/](https://localhost:44330/)".
     PM>  NuGet\Install-Package Microsoft.Owin.Host.SystemWeb -Version 4.2.2
 ```
 
-- Some packages can be installed from the "[NuGet Gallery](https://www.nuget.org/packages/Microsoft.AspNet.Identity.Core)" with the help of the "Tools > NuGet Package Manager > Package Manager Console".
 ----
 ## EmlakBizim Project [Images](https://github.com/AtakanTurgut/emlakbizim/tree/master/pictures).
 
